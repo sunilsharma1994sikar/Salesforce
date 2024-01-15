@@ -1,15 +1,15 @@
 <html>
     <head>
-        <title>Live Agent Sunil</title>
+        <title>Live Agent Bhatiwara</title>
     </head>
     <body>
         <style type='text/css'>
             .embeddedServiceHelpButton .helpButton .uiButton {
-                background-color: #50B138;
-                font-family: "Courier New", sans-serif;
+                background-color: #000000;
+                font-family: "Times New Roman", sans-serif;
             }
             .embeddedServiceHelpButton .helpButton .uiButton:focus {
-                outline: 1px solid #50B138;
+                outline: 1px solid #000000;
             }
         </style>
         
@@ -18,7 +18,8 @@
             var initESW = function(gslbBaseURL) {
                 embedded_svc.settings.displayHelpButton = true; //Or false
                 embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-        
+                embedded_svc.settings.autoOpenPostChat = true;
+
                 //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
                 //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
         
@@ -36,20 +37,19 @@
         
                 embedded_svc.settings.enabledFeatures = ['LiveAgent'];
                 embedded_svc.settings.entryFeature = 'LiveAgent';
-                embedded_svc.settings.autoOpenPostChat = true;
-
+        
                 embedded_svc.init(
-                    'https://sunil-sharma-dev-ed.my.salesforce.com',
-                    'https://sunil-sharma-dev-ed.my.site.com/customer',
+                    'https://sunildev2-dev-ed.my.salesforce.com',
+                    'https://sunildev2-dev-ed.my.site.com/',
                     gslbBaseURL,
-                    '00D5j000001toTC',
-                    'LIVEAgent',
+                    '00D5j000005L97L',
+                    'Live_Agent_Deployment',
                     {
                         baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
-                        deploymentId: '5725j00000052zH',
-                        buttonId: '5735j00000055F1',
+                        deploymentId: '5725j000000YJrK',
+                        buttonId: '5735j000000cXYU',
                         baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
-                        eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5j000000TYuzEAG_18c97a9abc2',
+                        eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5j000000XjLnEAK_18c97ffcd46',
                         isOfflineSupportEnabled: false
                     }
                 );
@@ -57,7 +57,7 @@
         
             if (!window.embedded_svc) {
                 var s = document.createElement('script');
-                s.setAttribute('src', 'https://sunil-sharma-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+                s.setAttribute('src', 'https://sunildev2-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
                 s.onload = function() {
                     initESW(null);
                 };
